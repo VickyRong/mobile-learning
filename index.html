@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/rem.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <style type="text/css">
+        #box{
+            width:10rem;
+            height: 10rem;
+            background: #03a9f4;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        $(function(){
+            var box = document.getElementById("box");
+            box.addEventListener('touchstart',start);
+            box.addEventListener('touchmove',move);
+            box.addEventListener('touchend',end);
+            function start(){
+                console.log("按下");
+            }
+            function move(){
+                console.log("移动");
+            }
+            function end(){
+                console.log("离开");
+            }
+        })
+            
+            
+        
+    </script>
+</body>
+</html>
